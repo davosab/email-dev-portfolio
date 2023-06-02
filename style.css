@@ -33,14 +33,38 @@ a {
   color: var(--green);
   font-weight: var(--medium);
 }
+h1 {
+  font-size: 2rem;
+}
+h2  {
+  font-size: 1.5rem;
+  color: var(--green);
+  text-transform: uppercase;
+  font-weight: var(--bold);
+}
+p {
+  line-height: 1.25;
+}
 body {
   padding-top: 3.4rem;
   color: var(--dark-blue);
+  text-align: center;
+}
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body::-webkit-scrollbar-track {
+  background: #ffff;
+}
+body::-webkit-scrollbar-thumb {
+  width: 13px;
+  background: #9b9b9b;
 }
 
 /*** Navigaion ***************************************************************/
 nav {
-  box-shadow: 0 0 1rem #bbbbbb;
+  box-shadow: 0 0 1rem #00000034;
   position: fixed;
   left: 0;
   top: 0;
@@ -88,11 +112,10 @@ nav h3 ~ a {
   line-height: 1.4rem;
 }
 
-/*** Hero *******************************************************************/
+/*** Hero ********************************************************************/
 .hero {
   min-height: calc(100vh - 3.4rem);
   background: var(--light-grey);
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
@@ -112,18 +135,15 @@ nav h3 ~ a {
   position: relative;
   z-index: 2;
 }
-h1 {
-  font-size: 2rem;
-}
 .hero-text p {
-  line-height: 1.25;
   padding: 0.75rem 0;
 }
 .hero-text a {
   display: inline-block;
   background: #fff;
-  padding: 0.6rem 1rem 0.5rem;
+  padding: 0.55rem 1rem 0.5rem;
   border-radius: 5rem;
+  margin-top: 0.5rem;
   font-weight: var(--bold);
 }
 /* Background image */
@@ -134,4 +154,64 @@ h1 {
   top: 30%;
 }
 
-/*** Skills *****************************************************************/
+/*** Skills ******************************************************************/
+.skills > h3 {
+  color: #fff;
+  background: var(--dark-blue);
+  padding: 0.5rem 0.5rem 0.4rem;
+  font-size: 1rem;
+  font-weight: var(--regular);
+}
+.skills-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem 1rem 6rem;
+  background-image: linear-gradient(-30deg, var(--teal), var(--green));
+}
+.skill {
+  border: 1px solid #8fff8080;
+  box-shadow: inset 0 0 0.5rem #8fff80bb;
+  background: #fff3;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.skill svg {
+  max-width: 80%;
+  margin: 0 auto auto;
+  min-width: none;
+}
+.skill p {
+  color: #fffd;
+  font-weight: var(--medium);
+  font-size: 0.65rem;
+}
+.gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5rem;
+  background: linear-gradient(#fff0, #fff);
+}
+
+/*** About *******************************************************************/
+.about h2 {
+  margin-top: 1.5rem;
+}
+.about-content {
+  padding: 1.5rem;
+}
+.about-content img {
+  display: none;
+}
+
+/*** Projects ****************************************************************/
+
+
+/*** Contact *****************************************************************/
