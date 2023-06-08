@@ -207,7 +207,12 @@ a {
 a:hover {
   text-decoration-color: transparent;
 }
-
+footer a svg {
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.2em;
+}
 @media screen and (min-width: 768px){
   .logo {
     width: 14vw;
