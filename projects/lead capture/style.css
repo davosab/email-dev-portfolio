@@ -200,6 +200,9 @@ footer {
   padding: 2em 8vw;
   font-size: 0.8rem;
 }
+footer p {
+  line-height: 1rem;
+}
 a {
   color: #fff;
   transition: text-decoration-color ease-out 0.2s;
