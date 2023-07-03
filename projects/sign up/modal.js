@@ -110,7 +110,13 @@ showErrors = () => {
 }
 
 showFinalMessage = () => {
+  message.classList.remove("red-italic");
+  message.innerText = "Alright!";
+  // Hide form
+  form.style.visibility = "hidden";
+  // Show message
   message.classList.add("big");
+  setTimeout(() => message.classList.add("remove-animation"), 1000);
 }
 
 /*** Form events *********************/
@@ -170,12 +176,7 @@ form.addEventListener("submit", e => {
   emailInput.classList.remove("red");
 
   if (modal.classList.contains("one-hundred")) {
-    message.classList.remove("red-italic");
-    message.innerText = "Alright!";
-    // Hide form
-    form.style.visibility = "hidden";
-    // Show final message after progress bar expands all the way
-    setTimeout(showFinalMessage, 500);
+    showFinalMessage();
     return;
   }
   showErrors();
