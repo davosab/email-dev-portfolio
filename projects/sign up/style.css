@@ -229,7 +229,8 @@ dialog.one-hundred .progress-bar div {
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
-#message.remove-animation::after {
+#message.remove-animations, 
+#message.remove-animations::after {
   opacity: 1;
   animation: none;
 }
