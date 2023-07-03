@@ -3,7 +3,7 @@
   --dark-blue: #2B2D42;
   --light-grey: #e9e9e9;
   --grey: #CFDBD5;
-  --dark-grey: #484864;
+  --dark-grey: #484857;
   --teal: #087F8C;
   --yellow: #FFBF00;
   --green: #138A36;
@@ -14,7 +14,7 @@
   --medium: 500;
   --bold: 700;
 
-  font-size: 14px;/* desktop 18px*/
+  font-size: 14px;/* desktop 18px */
 }
   
 *, *::before, *::after {
@@ -71,9 +71,8 @@ menu {
   justify-content: center;
   gap: 2rem;
   font-size: 1.5rem;
-  position: absolute;
+  position: sticky;
   backdrop-filter: blur(10px);
-  inset: 0;
   z-index: 9;
 }
 
@@ -132,9 +131,11 @@ nav h3 ~ a {
   background: var(--light-grey);
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  justify-content: center;
+  gap: 1rem;
   padding: 1.5rem;
   position: relative;
+  overflow: hidden;
 }
 /* Image */
 .hero-image {
@@ -143,6 +144,7 @@ nav h3 ~ a {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
+  max-width: 280px;
 }
 /* Text */
 .hero-text {
@@ -166,10 +168,51 @@ nav h3 ~ a {
   position: absolute;
   left: 0;
   right: 0;
-  top: 30%;
+  top: 40%;
+  z-index: 0;
 }
 
 /*** Skills ******************************************************************/
+.skills-container {
+  position: relative;
+  backdrop-filter: blur(4px);
+}
+@keyframes spin {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+.blob-container {
+  --blob-top: 50%;
+  --blob-left: 50%;
+
+  --blob-height: 5rem;
+  --blob-width: 4.2rem;
+
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.blob-container::before { /* blob */
+  content: "";
+  background-image: radial-gradient(var(--yellow), #fff0);
+  height: var(--blob-height);
+  width: var(--blob-width);
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--blob-top) - 0.5 * var(--blob-height));
+  left: calc(var(--blob-left) - 0.5 * var(--blob-width));
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.blob-container::after { /* blur overlay */
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(1rem);
+}
 .skills > h3 {
   color: #fff;
   background: var(--dark-blue);
@@ -195,12 +238,14 @@ nav h3 ~ a {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  position: relative;
+  z-index: 3;
 }
 .skill svg, 
 .skill img {
   max-width: 80%;
   margin: 0 auto auto;
-  min-width: none;
+  min-width: 0;
 }
 .skill p {
   color: #fffd;
@@ -252,6 +297,10 @@ nav h3 ~ a {
   color: var(--dark-blue);
   font-weight: var(--medium);
   text-transform: uppercase;
+}
+/* Cards */
+.card {
+  background: #fff;
 }
 
 /*** Contact *****************************************************************/
