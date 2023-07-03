@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.svg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="countdown.js" defer></script>
+  <script src="modal.js" defer></script>
+  <title>Iron Fitness Boot Camp</title>
+</head>
+<body>
+
+<!-- Email Capture Modal -->
+<dialog id="modal">
+
+  <div class="percent-complete"><span id="percent">50</span>% Complete</div>
+
+  <div class="progress-bar"><div></div></div>
+
+  <p id="message">
+    Last step: fill in the form below to receive the information.
+  </p>
+
+  <form>
+    <input id="name" type="text" placeholder="First Name" required>
+    <input id="email" type="email" placeholder="Email" required>
+    <button>Book My Free Spot</button>
+  </form>
+
+  <p>
+    Privacy Policy: We hate SPAM and promise to keep your email address safe
+  </p>
+
+  <button data-close-modal class="close-button">
+    <svg viewBox="0 0 10.6 11"><polygon points="6.3,5.4 10.4,1.4 9.2,0.3 5.3,4.2 1.3,0.3 0.2,1.4 4.3,5.4 0.2,9.5 1.3,10.7 5.3,6.8 9.2,10.7 10.4,9.5 "></polygon></svg>
+  </button>
+
+</dialog>
+
+<!-- Hero -->
+<section class="hero">
+  <article>
+    <img class="logo" src="images/logo.png" alt="BODYWORK Logo">
+    <h1>Try It Free: Iron Fitness 5-Week Boot Camp</h1>
+
+    <ul>
+      <li>Dramatically increase your fitness and wellbeing in just 5 weeks</li>
+      <li>Choose from a variety of convenient times and outdoor locations</li>
+      <li>Attend your first session free to see if Iron Fitness is for you</li>
+    </ul>
+
+    <button data-open-modal>Reserve Your FREE Spot</button>
+
+    <p class="note">
+      <span>Note:</span> To preserve our small class sizes, only 6 free trial 
+        spots are available in each session. Sign up now to reserve your place!
+    </p>
+
+  </article>
+</section>
+
+<!-- Weeks -->
+<section class="weeks">
+  <img class="heart-beat" src="images/heart beat.png" alt="Heart beat">
+  <h2>The Best Shape of Your Life in Just 5 Weeks.</h2>
+
+  <span>
+    It's possible with Iron Fitness Boot Camp. Here's how it works, week by 
+    week:
+  </span>
+
+  <ol>
+    <li>Learn fundamental fitness skills and discuss your fitness goals with a trainer.</li>
+    <li>Continue to work on the moves you've learned while increasing the number of reps and intensity.</li>
+    <li>Attend special sessions with a nutritionist in the first half of class to learn how to eat for strength. You'll also start adding cardio "homework" into your pre-class prep.</li>
+    <li>Assess what you've achieved so far and correct course if needed to hit your goals by the end of the program.</li>
+    <li>Measure what you've accomplished and document a fitness plan to maintain the gains you've achieved long term.</li>
+  </ol>
+
+</section>
+
+<!-- Countdown -->
+<section class="next-bootcamp">
+  <h2>Our Next Boot Camp Will Start in:</h2>
+  <div class="countdown">
+    <div>
+      <span id="days">0</span>
+      <div class="unit">DAYS</div>
+    </div>
+    <div>
+      <span id="hours">0</span>
+      <div class="unit">HOURS</div>
+    </div>
+    <div>
+      <span id="minutes">0</span>
+      <div class="unit">MINUTES</div>
+    </div>
+    <div>
+      <span id="seconds">0</span>
+      <div class="unit">SECONDS</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2>Hear What Past Attendees Have Said</h2>
+  <div>
+
+    <div class="testimonial">
+      <img src="images/laura.png" alt="Laura">
+
+      <q>As much as I've tried to commit to other fitness programs, I'd never 
+        seen serious results before I joined this boot camp. One year later, 
+        I've maintained all the progress I achieved and then some.</q>
+      
+      <div class="about-attendee">
+        <span class="name-age">Laura, 26</span>
+        <p class="class-attended">Class of Fall 2020</p>
+      </div>
+    </div>
+    
+    <div class="testimonial">
+      <img src="images/mark.jpg" alt="Mark">
+      
+        <q>The instructors really know their stuff, and it is great to have 
+        someone so knowledgable keeping you on track throughout the workout. I 
+        always left feeling amazing and looking forward to the next class!</q>
+      
+      <div class="about-attendee">
+        <span class="name-age">Mark, 43</span>
+        <p class="class-attended">Class of Spring 2020</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <img class="heart-beat" src="images/heart beat.png" alt="Heart beat">
+  <h2>Ready to try it for yourself?</h2>
+  <button data-open-modal>Yes! Sign Me Up</button>
+  <p class="note"><span>Reminder:</span> Only 6 places available!</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>
+    ©Copyright BODYWORK Fitness. All rights reserved. 
+    <a href="#">Privacy Policy</a> | Coded by 
+    <a href="#" target="_blank">David Sabau</a> | 
+    <a href="#" target="_blank">View Code
+      <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [#142]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"> </path> </g> </g> </g> </g></svg>
+    </a>
+  </p>
+</footer>
+</body>
+</html>
