@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.png">
+  <script src="script.js" defer></script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +47,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-image">
-    <img src="images/me.avif" alt="David Sabau">
+    <img src="images/me.png" alt="David Sabau">
   </div>
   <div class="hero-text">
     <h1>Email Developer</h1>
@@ -56,7 +57,7 @@
     </p>
     <a href="#">Get in touch!</a>
   </div>
-  <img class="bg-image" src="images/letter stream.png" width="100%" alt="letter stream">
+  <img class="bg-image" src="images/letter stream mobile.png" width="100%" alt="letter stream">
 </section>
 
 <!-- Skills -->
@@ -64,6 +65,7 @@
   <h3>Skills</h3>
 
   <div class="skills-container">
+    <div class="blob-container"></div>
 
     <div class="skill">
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/><path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/><path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/></svg>
@@ -76,7 +78,7 @@
     </div>
 
     <div class="skill">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M0 0H24V24H0V0ZM18.3467 20.1196C17.2343 20.1196 16.6053 19.5394 16.1219 18.7501L14.2891 19.8149C14.9512 21.123 16.3044 22.1211 18.3989 22.1211C20.5409 22.1211 22.136 21.0088 22.136 18.9783C22.136 17.0949 21.0541 16.2571 19.1379 15.4354L18.5741 15.1939C17.6065 14.7749 17.1874 14.501 17.1874 13.8244C17.1874 13.277 17.6061 12.8579 18.2667 12.8579C18.9143 12.8579 19.3314 13.131 19.7181 13.8244L21.4743 12.6968C20.7314 11.3901 19.7006 10.891 18.2667 10.891C16.2526 10.891 14.9638 12.1787 14.9638 13.8701C14.9638 15.7063 16.0449 16.5749 17.6724 17.2682L18.2362 17.5101C19.2648 17.96 19.8781 18.2339 19.8781 19.0072C19.8781 19.6526 19.2811 20.1196 18.3467 20.1196ZM9.60647 20.1055C8.83161 20.1055 8.50933 19.5741 8.15504 18.9455L6.31923 20.057C6.85104 21.1825 7.89676 22.117 9.70247 22.117C11.7009 22.117 13.0701 21.0541 13.0701 18.7189V11.0198H10.8149V18.6884C10.8149 19.8156 10.3474 20.1055 9.60647 20.1055Z" fill="#FEDA3E"/></svg>
+      <svg style="background: #2B2D42" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M0 0H24V24H0V0ZM18.3467 20.1196C17.2343 20.1196 16.6053 19.5394 16.1219 18.7501L14.2891 19.8149C14.9512 21.123 16.3044 22.1211 18.3989 22.1211C20.5409 22.1211 22.136 21.0088 22.136 18.9783C22.136 17.0949 21.0541 16.2571 19.1379 15.4354L18.5741 15.1939C17.6065 14.7749 17.1874 14.501 17.1874 13.8244C17.1874 13.277 17.6061 12.8579 18.2667 12.8579C18.9143 12.8579 19.3314 13.131 19.7181 13.8244L21.4743 12.6968C20.7314 11.3901 19.7006 10.891 18.2667 10.891C16.2526 10.891 14.9638 12.1787 14.9638 13.8701C14.9638 15.7063 16.0449 16.5749 17.6724 17.2682L18.2362 17.5101C19.2648 17.96 19.8781 18.2339 19.8781 19.0072C19.8781 19.6526 19.2811 20.1196 18.3467 20.1196ZM9.60647 20.1055C8.83161 20.1055 8.50933 19.5741 8.15504 18.9455L6.31923 20.057C6.85104 21.1825 7.89676 22.117 9.70247 22.117C11.7009 22.117 13.0701 21.0541 13.0701 18.7189V11.0198H10.8149V18.6884C10.8149 19.8156 10.3474 20.1055 9.60647 20.1055Z" fill="#FEDA3E"/></svg>
       <p>JavaScript</p>
     </div>
 
@@ -86,7 +88,7 @@
     </div>
 
     <div class="skill">
-      <svg style="margin-top: 0.5rem" viewBox="0 0 87 56" xmlns="http://www.w3.org/2000/svg" alt="Marketing Software by GetResponse"><path d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z" fill="#00baff"></path><path d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3z" fill="#fff"></path></svg>
+      <svg style="margin-top: 0.5rem" viewBox="0 0 88 56" xmlns="http://www.w3.org/2000/svg" alt="Marketing Software by GetResponse"><path d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z" fill="#00baff"></path><path d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3z" fill="#fff"></path></svg>
       <p>GetResponse ESP</p>
     </div>
 
@@ -152,7 +154,15 @@
   <div class="cards-container">
 
     <article class="card">
-
+      <img src="" alt="Page preview">
+      <div class="about-project">
+        <h3>Lead Capture Page</h3>
+        <span class="type">Landing Page</span>
+        <p class="summary">
+          A simple landing page that collects emails.
+        </p>
+      </div>
+      <a target="_blank" href="projects/lead capture/lead-capture.html">lead page</a>
     </article>
 
   </div>
