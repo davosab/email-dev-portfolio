@@ -116,7 +116,7 @@ showFinalMessage = () => {
   form.style.visibility = "hidden";
   // Show message
   message.classList.add("big");
-  setTimeout(() => message.classList.add("remove-animation"), 1000);
+  setTimeout(() => message.classList.add("remove-animations"), 1000);
 }
 
 /*** Form events *********************/
