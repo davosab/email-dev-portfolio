@@ -39,7 +39,7 @@ body {
 
 /*** Header ******************************************************************/
 header {
-  padding: 8vw;
+  padding: min(7vh, 3rem) 8vw;
 }
 .logo {
   width: min(100%, 186px);
@@ -84,7 +84,7 @@ span {
 }
 #form {
   background: #ffffff14;
-  margin: 8vw 3vw;
+  margin: min(8vw, 3rem) 3vw;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -222,10 +222,14 @@ footer a svg {
   }
   main {
     flex-direction: row;
+    margin-top: min(3rem, 3vh);
   }
   .copy {
     padding-right: 0;
-    max-width: 60%;
+    max-width: min(60%, 900px);
+  }
+  #form {
+    max-width: 434px;
   }
   #welcome-message {
     font-size: min(2.8rem, 5vw);
