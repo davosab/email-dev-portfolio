@@ -15,7 +15,7 @@
   font-size: clamp(14px, 6vw, 16px);
 }
 
-/*** General ****************************************************************/
+/*** General *****************************************************************/
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -155,34 +155,6 @@ dialog::backdrop {
   background-size: 100% calc(3 * var(--color-thickness) * 1.41421356 + var(--height));
   transition: width ease-out 0.5s;
 }
-#message {
-  color: #000;
-  margin: 0.5rem 0;
-}
-form {
-  display: grid;
-  gap: clamp(0.4rem, 2vw, 0.75rem);
-}
-input {
-  min-width: 0;
-  text-align: left;
-  font-size: 1rem;
-  padding: 0.25em 0.4em;
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  color: #020020
-}
-input::placeholder {
-  color: #4c515d;
-}
-input:focus {
-  outline: none;
-  box-shadow: #bbb 0 0 1.5px 1px;
-}
-form + p {
-  color: #858585;
-  font-size: 0.9rem;
-}
 /* JS added & removed */
 dialog.open {
   translate: 0;
@@ -197,11 +169,93 @@ dialog.seventy-five .progress-bar div {
 dialog.one-hundred .progress-bar div {
   width: 100%;
 }
+/**********************/
+#message {
+  color: #000;
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+/* JS added & removed */
+@keyframes scale-up {
+  0% {scale: 1; rotate: 0deg;}
+  10% {rotate: 2deg}
+  30% {rotate: -2deg;}
+  50% {scale: 1.05; rotate: 2deg}
+  70% {rotate: -2deg;}
+  90% {rotate: 2deg;}
+  100% {scale: 1; rotate: 0deg;}
+}
+#message.shake-animation {
+  animation: scale-up 0.15s linear;
+}
 #message.red-italic {
   color: red;
   font-style: italic;
 }
-/*** Hero *******************************************************************/
+#message.big {
+  position: absolute;
+  /* top calc()
+    dialog padding-top +
+    .percent-complete font-size +
+    .progress-bar top & bottom margin +
+    .progress-bar height
+   */
+  top: calc(
+    clamp(2.75rem ,4.5vw, 4rem) + 
+    0.9rem +
+    2 * min(1.25rem, 3.5vw) + 
+    0.375rem);
+    left: 0;
+    right: 0;
+  margin: 0 auto;
+  font-size: clamp(2rem, 12vw, 5rem);
+
+}
+#message.big::after {
+  content: "Keep an eye out for our email!";
+}
+#message.big + form {
+  margin-top: calc( 2 * min(1.25rem, 3.5vw) + 2.5rem);
+}
+/**********************/
+form {
+  display: grid;
+  gap: clamp(0.4rem, 2vw, 0.75rem);
+}
+input {
+  min-width: 0;
+  text-align: left;
+  font-size: 1rem;
+  padding: 0.25em 0.4em;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  color: #020020;
+  box-shadow: #bbb0 0 0 1.5px 1px;
+  background-color: #0000;
+  transition: 
+    box-shadow ease-out 0.15s,
+    background-color ease-out 0.15s;
+}
+input::placeholder {
+  color: #4c515d;
+}
+input:focus {
+  outline: none;
+  box-shadow: #bbb 0 0 1.5px 1px;
+}
+/* JS added & removed */
+input.red {
+  border: 1px solid red;
+  background-color: #ff00000e;
+}input.red:focus {
+  box-shadow: #ff000080 0 0 1.5px 1px;
+}
+/**********************/
+form + p {
+  color: #858585;
+  font-size: 0.9rem;
+}
+/*** Hero ********************************************************************/
 .hero {
   min-height: 100vh;
   display: grid;
