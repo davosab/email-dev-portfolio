@@ -80,23 +80,37 @@ showErrors = () => {
     email = emailInput.value.trim();
   
   message.classList.add("red-italic");
+  // Remove previous shake animation
+  message.classList.remove("shake-animation");
 
+  message.offsetHeight;
+  if (message.classList.contains("red-italic")) {
+    message.classList.add("shake-animation");
+  }
+  
   if (!firstName) {
     if (!validateEmail(email)) {
       message.innerText = bothInvalid;
+      firstNameInput.classList.add("red");
+      emailInput.classList.add("red");
+      firstNameInput.focus();
       return;
     }
+    firstNameInput.classList.add("red");
     message.innerText = firstNameInvalid;
+    firstNameInput.focus();
     return;
   }
   if (!validateEmail(email)) {
+    emailInput.classList.add("red");
     message.innerText = emailInvalid;
+    emailInput.focus();
     return;
   }
 }
 
-thankYou = () => {
-  alert("Thank you!");
+showFinalMessage = () => {
+  message.classList.add("big");
 }
 
 /*** Form events *********************/
@@ -151,20 +165,18 @@ emailInput.addEventListener("blur", () => {
 
 form.addEventListener("submit", e => {
   e.preventDefault();
+  
+  firstNameInput.classList.remove("red");
+  emailInput.classList.remove("red");
+
   if (modal.classList.contains("one-hundred")) {
     message.classList.remove("red-italic");
-    message.innerText = "Thank you!";
-    setTimeout(thankYou, 500);
+    message.innerText = "Alright!";
+    // Hide form
+    form.style.visibility = "hidden";
+    // Show final message after progress bar expands all the way
+    setTimeout(showFinalMessage, 500);
     return;
   }
   showErrors();
 });
-
-/* 
-
-NEEDED
-
-  - Thank you function
-  - Error message shake animation
-
-*/
