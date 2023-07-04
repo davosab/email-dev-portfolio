@@ -52,6 +52,11 @@ body {
   color: var(--dark-blue);
   text-align: center;
 }
+/* JS added & removed */
+body.no-scroll {
+  overflow: hidden;
+}
+/**********************/
 /* Scrollbar */
 body::-webkit-scrollbar {
   width: 10px;
@@ -64,16 +69,28 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*** Mobile Menu *************************************************************/
-menu {
-  display: none;
+.mobile-menu {
+  display: flex;
+  overflow: hidden;
   list-style-type: none;
   flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1.5rem;
-  position: sticky;
-  backdrop-filter: blur(10px);
+  align-items: center;
+  font-size: 1.25rem;
   z-index: 9;
+  background: #fff4;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 100vh;
+  width: 0%;
+  transition: width ease-out 0.3s;
+  padding-top: 1em;
+}
+.mobile-menu a {
+  padding: 0.7em 0;
+}
+/* JS added & removed */
+.open {
+  width: 100%;
 }
 
 /*** Navigaion ***************************************************************/
@@ -98,6 +115,7 @@ nav {
 .logo {
   margin-right: auto;
   font-size: 1.4rem;
+  caret-color: #0000;
 }
 .logo a {
   font-weight: var(--bold);
@@ -109,16 +127,47 @@ nav {
 }
 /* Burger */
 .burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 1.4rem;
   width: 1.8rem;
+  position: relative;
+  caret-color: #0000;
+  cursor: pointer;
 }
 .burger div {
+  position: absolute;
   height: 2px;
+  width: 100%;
   background: var(--dark-blue);
+  transition: all ease-out 0.2s;
 }
+.burger :nth-child(1){
+  top: 0;
+}
+.burger :nth-child(2){
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: none;
+}
+.burger :nth-child(3){
+  bottom: 0;
+}
+/* JS added & removed (burger to x transition)*/
+.x :nth-child(odd){
+  top: 50%;
+  margin: 0 auto;
+}
+.x :nth-child(1){
+  rotate: 40deg;
+}
+.x :nth-child(2){
+  opacity: 0;
+}
+.x :nth-child(3){
+  rotate: -40deg;
+  bottom: 50%;
+}
+/**********************/
 /* Links */
 nav h3 ~ a {
   display: none;
@@ -182,8 +231,8 @@ nav h3 ~ a {
   100% {transform: rotate(360deg)}
 }
 .blob-container {
-  --blob-top: 50%;
-  --blob-left: 50%;
+  --mouse-x: 0; /* updated with JS */
+  --mouse-y: 0; /*                 */
 
   --blob-height: 5rem;
   --blob-width: 4.2rem;
@@ -200,12 +249,13 @@ nav h3 ~ a {
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  top: calc(var(--blob-top) - 0.5 * var(--blob-height));
-  left: calc(var(--blob-left) - 0.5 * var(--blob-width));
-  animation-name: spin;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+  translate: calc(-0.5 * var(--blob-width)) calc(-0.5 * var(--blob-height));
+  animation: spin 5s linear infinite;
+  transition: 
+    top ease-out 0.15s, 
+    left ease-out 0.15s;
 }
 .blob-container::after { /* blur overlay */
   content: "";
