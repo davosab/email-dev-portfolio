@@ -3,36 +3,43 @@
 const
   mobileMenu = document.querySelector("[data-mobile-menu]"),
   burger = document.querySelector("[data-burger]"),
-  body = document.querySelector("body");
+  body = document.querySelector("body"),
+  mobileDevicePattern = /android | iphone | ipad | kindle/i;
 
 burger.addEventListener("click", () => openOrCloseMenu());
 
 openOrCloseMenu = () => {
-  body.classList.toggle("no-scroll");
   burger.classList.toggle("x");
   mobileMenu.classList.toggle("open");
+  // if mobile device
+  if (mobileDevicePattern.test(navigator.userAgent)) {
+    body.classList.toggle("no-scroll");
+  }
+  // Add margin to body to prevent body expanding when scrollbar disappears
+  else { 
+    body.classList.toggle("no-scroll-margin");
+  }
 }
 
 
 /*** Skills Blob - mouse follower ********************************************/
 
 const
-  skillsContainer = document.querySelector("[data-skills-container]"),
+  gradientBackground = document.querySelector("[data-gradient-background]"),
   blobContainer = document.querySelector("[data-blob-container]");
     
-skillsContainer.addEventListener("mousemove", e => {
+body.addEventListener("mousemove", e => {
   const
-    skillsContainerRect = skillsContainer.getBoundingClientRect(),
-    mouseX = e.clientX - skillsContainerRect.left,
-    mouseY = e.clientY - skillsContainerRect.top;
+    gradientBackgroundRect = gradientBackground.getBoundingClientRect(),
+    mouseX = e.clientX - gradientBackgroundRect.left,
+    mouseY = e.clientY - gradientBackgroundRect.top;
 
   updateBlobPosition = () => {
     blobContainer.style.setProperty("--mouse-x", mouseX + "px");
     blobContainer.style.setProperty("--mouse-y", mouseY + "px");
   }
-  requestAnimationFrame(updateBlobPosition);  
+  requestAnimationFrame(updateBlobPosition);
 });
-
 
 /***  ***/
 
