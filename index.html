@@ -13,17 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <title>David Sabau</title>
+  <title>Email Developer | David Sabau</title>
 </head>
 <body>
 
+<!-- Navigation -->
 <menu data-mobile-menu class="mobile-menu">
     <a href="">About</a>
     <a href="">Projects</a>
     <a href="">Contact</a>
 </menu>
 
-<!-- Navigation -->
 <nav>
   <div class="nav-items-container">
     <h3 class="logo">
@@ -57,80 +57,68 @@
     </p>
     <a href="#">Get in touch!</a>
   </div>
-  <img class="bg-image" src="images/letter stream mobile.png" width="100%" alt="letter stream">
+  <picture>
+    <source media="(min-width: 600px)" srcset="images/letter-stream.png">
+    <img class="bg-image" src="images/letter-stream-mobile.png" width="100%" alt="letter stream">
+  </picture>
 </section>
 
 <!-- Skills -->
 <section class="skills">
   <h3>Skills</h3>
 
-  <div data-skills-container class="skills-container">
-    <div data-blob-container class="blob-container"></div>
-
-    <div class="skill">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/><path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/><path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/></svg>
-      <p>HTML</p>
+  <div data-gradient-background class="skills-container-wrapper">
+    <div class="skills-container">
+      <div data-blob-container class="blob-container"></div>
+      <div class="skill">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"/><path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"/><path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"/></svg>
+        <p>HTML</p>
+      </div>
+      <div class="skill">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/><path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/><path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/></svg>
+        <p>CSS</p>
+      </div>
+      <div class="skill">
+        <svg style="background: #2B2D42" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M0 0H24V24H0V0ZM18.3467 20.1196C17.2343 20.1196 16.6053 19.5394 16.1219 18.7501L14.2891 19.8149C14.9512 21.123 16.3044 22.1211 18.3989 22.1211C20.5409 22.1211 22.136 21.0088 22.136 18.9783C22.136 17.0949 21.0541 16.2571 19.1379 15.4354L18.5741 15.1939C17.6065 14.7749 17.1874 14.501 17.1874 13.8244C17.1874 13.277 17.6061 12.8579 18.2667 12.8579C18.9143 12.8579 19.3314 13.131 19.7181 13.8244L21.4743 12.6968C20.7314 11.3901 19.7006 10.891 18.2667 10.891C16.2526 10.891 14.9638 12.1787 14.9638 13.8701C14.9638 15.7063 16.0449 16.5749 17.6724 17.2682L18.2362 17.5101C19.2648 17.96 19.8781 18.2339 19.8781 19.0072C19.8781 19.6526 19.2811 20.1196 18.3467 20.1196ZM9.60647 20.1055C8.83161 20.1055 8.50933 19.5741 8.15504 18.9455L6.31923 20.057C6.85104 21.1825 7.89676 22.117 9.70247 22.117C11.7009 22.117 13.0701 21.0541 13.0701 18.7189V11.0198H10.8149V18.6884C10.8149 19.8156 10.3474 20.1055 9.60647 20.1055Z" fill="#FEDA3E"/></svg>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill">
+        <svg fill="#2B2D42" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="455.056 796 200 200" enable-background="new 455.056 796 200 200" xml:space="preserve"><path d="M599.091,796h-88.068c-9.139,0-16.574,7.435-16.574,16.572v166.854c0,9.138,7.436,16.573,16.574,16.573h88.068c9.138,0,16.572-7.436,16.572-16.573V812.572C615.663,803.435,608.229,796,599.091,796z M603.339,979.427c0,2.343-1.906,4.25-4.248,4.25h-88.068c-2.344,0-4.25-1.907-4.25-4.25V812.572c0-2.343,1.907-4.249,4.25-4.249h15.164c0.515,4.248,4.132,7.541,8.519,7.541h40.697c4.392,0,8.005-3.293,8.52-7.541h15.169c2.342,0,4.248,1.906,4.248,4.249V979.427z"/></svg>
+        <p>RWD</p>
+      </div>
+      <div class="skill">
+        <svg style="margin-top: 0.5rem" viewBox="0 0 88 56" xmlns="http://www.w3.org/2000/svg" alt="Marketing Software by GetResponse"><path d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z" fill="#00baff"></path><path d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3z" fill="#fff"></path></svg>
+        <p>ESP</p>
+      </div>
+      <div class="skill">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.0016 3.11679C21.0016 2.23783 20.0175 2.23782 19.5801 2.34769C20.1924 1.86426 20.9105 1.98147 21.1656 2.12796L27.079 5.02747C27.6424 5.30375 27.9998 5.8786 27.9998 6.50857V25.5831C27.9998 26.2215 27.6329 26.8025 27.058 27.0743L21.4937 29.7054C21.1109 29.8701 20.2799 30.2767 19.5801 29.7053C20.4549 29.8702 20.9287 29.2476 21.0016 28.8264V3.11679Z" fill="url(#paint0_linear_87_8101)"/><path d="M19.6512 2.3319C20.1154 2.24017 21.0018 2.28271 21.0018 3.11685V9.68254L3.07359 23.2453C2.76022 23.4824 2.3192 23.443 2.05229 23.1542L0.204532 21.1548C-0.0849358 20.8416 -0.0646824 20.3513 0.249624 20.0633L19.5802 2.34775L19.6512 2.3319Z" fill="url(#paint1_linear_87_8101)"/><path d="M21.0018 22.3708L3.07359 8.80801C2.76022 8.57094 2.3192 8.61028 2.05229 8.8991L0.204532 10.8985C-0.0849358 11.2117 -0.0646824 11.702 0.249624 11.9901L19.5802 29.7056C20.455 29.8704 20.9289 29.2478 21.0018 28.8266V22.3708Z" fill="url(#paint2_linear_87_8101)"/><defs><linearGradient id="paint0_linear_87_8101" x1="23.79" y1="2" x2="23.79" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#32B5F1"/><stop offset="1" stop-color="#2B9FED"/></linearGradient><linearGradient id="paint1_linear_87_8101" x1="21.0018" y1="5.53398" x2="1.0217" y2="22.3051" gradientUnits="userSpaceOnUse"><stop stop-color="#0F6FB3"/><stop offset="0.270551" stop-color="#1279B7"/><stop offset="0.421376" stop-color="#1176B5"/><stop offset="0.618197" stop-color="#0E69AC"/><stop offset="0.855344" stop-color="#0F70AF"/><stop offset="1" stop-color="#0F6DAD"/></linearGradient><linearGradient id="paint2_linear_87_8101" x1="1.15522" y1="9.98389" x2="21.0791" y2="26.4808" gradientUnits="userSpaceOnUse"><stop stop-color="#1791D2"/><stop offset="1" stop-color="#1173C5"/></linearGradient></defs></svg>
+        <p>VS Code</p>
+      </div>
+      <div class="skill">
+        <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1"><g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#2B2D42"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path></g></g></g></svg>
+        <p>GitHub</p>
+      </div>
+      <div class="skill">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#dbe9fa;}.cls-2{fill:#d9dce1;}.cls-3{fill:#ffffff;}.cls-4{fill:#52acf9;}</style></defs><g data-name=" performance" id="_performance"><circle class="cls-1" cx="16" cy="16" r="16"/><rect class="cls-2" height="14" width="6" x="2" y="16"/><rect class="cls-3" height="19" width="6" x="11" y="11"/><polygon class="cls-4" points="23 1.4 16.92 9 20 9 20 30 26 30 26 9 29.08 9 23 1.4"/><path d="M2,30H8V16H2ZM4,18H6V28H4Zm7,12h6V11H11Zm2-17h2V28H13ZM23,1.4,16.92,9H20V30h6V9h3.08ZM24,7V28H22V7h-.92L23,4.6,24.92,7Z"/></g></svg>
+        <p>Marketing</p>
+      </div>
+      <div class="skill">
+        <img src="images/canva.png" alt="Canva">
+        <p>Canva</p>
+      </div>
+      <div class="skill">
+        <img src="images/photoshop.png" alt="Photoshop">
+        <p>Photoshop</p>
+      </div>
+      <div class="gradient"></div>
     </div>
-
-    <div class="skill">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#1172B8"/><path d="M26 5H16V29.5L24 27L26 5Z" fill="#33AADD"/><path d="M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z" fill="white"/></svg>
-      <p>CSS</p>
-    </div>
-
-    <div class="skill">
-      <svg style="background: #2B2D42" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M0 0H24V24H0V0ZM18.3467 20.1196C17.2343 20.1196 16.6053 19.5394 16.1219 18.7501L14.2891 19.8149C14.9512 21.123 16.3044 22.1211 18.3989 22.1211C20.5409 22.1211 22.136 21.0088 22.136 18.9783C22.136 17.0949 21.0541 16.2571 19.1379 15.4354L18.5741 15.1939C17.6065 14.7749 17.1874 14.501 17.1874 13.8244C17.1874 13.277 17.6061 12.8579 18.2667 12.8579C18.9143 12.8579 19.3314 13.131 19.7181 13.8244L21.4743 12.6968C20.7314 11.3901 19.7006 10.891 18.2667 10.891C16.2526 10.891 14.9638 12.1787 14.9638 13.8701C14.9638 15.7063 16.0449 16.5749 17.6724 17.2682L18.2362 17.5101C19.2648 17.96 19.8781 18.2339 19.8781 19.0072C19.8781 19.6526 19.2811 20.1196 18.3467 20.1196ZM9.60647 20.1055C8.83161 20.1055 8.50933 19.5741 8.15504 18.9455L6.31923 20.057C6.85104 21.1825 7.89676 22.117 9.70247 22.117C11.7009 22.117 13.0701 21.0541 13.0701 18.7189V11.0198H10.8149V18.6884C10.8149 19.8156 10.3474 20.1055 9.60647 20.1055Z" fill="#FEDA3E"/></svg>
-      <p>JavaScript</p>
-    </div>
-
-    <div class="skill">
-      <svg fill="#2B2D42" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="455.056 796 200 200" enable-background="new 455.056 796 200 200" xml:space="preserve"><path d="M599.091,796h-88.068c-9.139,0-16.574,7.435-16.574,16.572v166.854c0,9.138,7.436,16.573,16.574,16.573h88.068c9.138,0,16.572-7.436,16.572-16.573V812.572C615.663,803.435,608.229,796,599.091,796z M603.339,979.427c0,2.343-1.906,4.25-4.248,4.25h-88.068c-2.344,0-4.25-1.907-4.25-4.25V812.572c0-2.343,1.907-4.249,4.25-4.249h15.164c0.515,4.248,4.132,7.541,8.519,7.541h40.697c4.392,0,8.005-3.293,8.52-7.541h15.169c2.342,0,4.248,1.906,4.248,4.249V979.427z"/></svg>
-      <p>Responsive Designs</p>
-    </div>
-
-    <div class="skill">
-      <svg style="margin-top: 0.5rem" viewBox="0 0 88 56" xmlns="http://www.w3.org/2000/svg" alt="Marketing Software by GetResponse"><path d="M87.6 52c0 2.1-1.7 3.7-3.7 3.7H3.7C1.7 55.8 0 54.1 0 52V3.7C0 1.7 1.7 0 3.7 0h80.1c2.1 0 3.7 1.7 3.7 3.7V52z" fill="#00baff"></path><path d="M86.8 1.4C76.4 17.5 60.3 32.3 43.7 31.9c-6.1-.1-13.1-1.9-19-6.7C20.3 21.6 15.9 16 14.2 8h-1.8c-2.7 0-4.3 2.4-4 4.6.1.5.2 1.1.3 1.7 1.3 7.8 5.9 16.6 13.6 22.3 6 4.4 13.4 7.3 21.5 7.3 14.6 0 30.2-9.3 43.8-33.2v-7c0-.8-.3-1.7-.8-2.3z" fill="#fff"></path></svg>
-      <p>GetResponse ESP</p>
-    </div>
-
-    <div class="skill">
-      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.0016 3.11679C21.0016 2.23783 20.0175 2.23782 19.5801 2.34769C20.1924 1.86426 20.9105 1.98147 21.1656 2.12796L27.079 5.02747C27.6424 5.30375 27.9998 5.8786 27.9998 6.50857V25.5831C27.9998 26.2215 27.6329 26.8025 27.058 27.0743L21.4937 29.7054C21.1109 29.8701 20.2799 30.2767 19.5801 29.7053C20.4549 29.8702 20.9287 29.2476 21.0016 28.8264V3.11679Z" fill="url(#paint0_linear_87_8101)"/><path d="M19.6512 2.3319C20.1154 2.24017 21.0018 2.28271 21.0018 3.11685V9.68254L3.07359 23.2453C2.76022 23.4824 2.3192 23.443 2.05229 23.1542L0.204532 21.1548C-0.0849358 20.8416 -0.0646824 20.3513 0.249624 20.0633L19.5802 2.34775L19.6512 2.3319Z" fill="url(#paint1_linear_87_8101)"/><path d="M21.0018 22.3708L3.07359 8.80801C2.76022 8.57094 2.3192 8.61028 2.05229 8.8991L0.204532 10.8985C-0.0849358 11.2117 -0.0646824 11.702 0.249624 11.9901L19.5802 29.7056C20.455 29.8704 20.9289 29.2478 21.0018 28.8266V22.3708Z" fill="url(#paint2_linear_87_8101)"/><defs><linearGradient id="paint0_linear_87_8101" x1="23.79" y1="2" x2="23.79" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#32B5F1"/><stop offset="1" stop-color="#2B9FED"/></linearGradient><linearGradient id="paint1_linear_87_8101" x1="21.0018" y1="5.53398" x2="1.0217" y2="22.3051" gradientUnits="userSpaceOnUse"><stop stop-color="#0F6FB3"/><stop offset="0.270551" stop-color="#1279B7"/><stop offset="0.421376" stop-color="#1176B5"/><stop offset="0.618197" stop-color="#0E69AC"/><stop offset="0.855344" stop-color="#0F70AF"/><stop offset="1" stop-color="#0F6DAD"/></linearGradient><linearGradient id="paint2_linear_87_8101" x1="1.15522" y1="9.98389" x2="21.0791" y2="26.4808" gradientUnits="userSpaceOnUse"><stop stop-color="#1791D2"/><stop offset="1" stop-color="#1173C5"/></linearGradient></defs></svg>
-      <p>VS Code</p>
-    </div>
-
-    <div class="skill">
-      <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Page-1" stroke="none" stroke-width="1"><g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#2B2D42"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path></g></g></g></svg>
-      <p>GitHub</p>
-    </div>
-
-    <div class="skill">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#dbe9fa;}.cls-2{fill:#d9dce1;}.cls-3{fill:#ffffff;}.cls-4{fill:#52acf9;}</style></defs><g data-name=" performance" id="_performance"><circle class="cls-1" cx="16" cy="16" r="16"/><rect class="cls-2" height="14" width="6" x="2" y="16"/><rect class="cls-3" height="19" width="6" x="11" y="11"/><polygon class="cls-4" points="23 1.4 16.92 9 20 9 20 30 26 30 26 9 29.08 9 23 1.4"/><path d="M2,30H8V16H2ZM4,18H6V28H4Zm7,12h6V11H11Zm2-17h2V28H13ZM23,1.4,16.92,9H20V30h6V9h3.08ZM24,7V28H22V7h-.92L23,4.6,24.92,7Z"/></g></svg>
-      <p>Marketing</p>
-    </div>
-
-    <div class="skill">
-      <img src="images/canva.png" alt="Canva">
-      <p>Canva</p>
-    </div>
-
-    <div class="skill">
-      <img src="images/Photoshop Express.png" alt="Photoshop Express">
-      <p>Photoshop Express</p>
-    </div>
-
-    <div class="gradient"></div>
   </div>
 </section>
 
 <!-- About -->
 <section class="about">
-  <img src="images/plant on desk.webp" alt="Green plant and laptop on a desk">
-  <h2>About me</h2>
-  <div class="about-content">
-    <img src="images/plant on desk.webp" alt="Green plant and laptop on a desk">
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut corrupti unde corporis, iure eos illum libero delectus aperiam provident amet commodi perferendis nesciunt porro aut distinctio repudiandae iste. Eum, autem.
-    </p>
-  </div>
+<h2>About Me</h2>
+
 </section>
 
 <!-- Projects -->
