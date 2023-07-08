@@ -248,6 +248,8 @@ nav h3 ~ a {
   --blob-height: 5rem;
   --blob-width: 4.2rem;
 
+  --opacity: 1;
+
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -267,6 +269,7 @@ nav h3 ~ a {
   transition: 
     top ease-out 0.15s, 
     left ease-out 0.15s;
+  opacity: var(--opacity);
 }
 .blob-container::after { /* blur overlay */
   content: "";
