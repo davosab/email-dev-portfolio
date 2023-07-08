@@ -35,7 +35,7 @@ a {
   font-weight: var(--medium);
 }
 h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 8vw, 3rem);
 }
 h2  {
   font-size: 1.5rem;
@@ -47,7 +47,7 @@ p {
   color: var(--dark-grey);
 }
 body {
-  --max-content-width: 1000px;
+  --max-content-width: 1200px;
 
   padding-top: 3.4rem;
   color: var(--dark-blue);
@@ -187,8 +187,7 @@ nav h3 ~ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 9vw, 3rem);
   position: relative;
   overflow: hidden;
 }
@@ -198,10 +197,10 @@ nav h3 ~ a {
   z-index: 2;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto;
   width: min(80vw, 15rem);
   box-shadow: 0 0.5rem 1rem #0004;
   border: 2px solid var(--green);
+  margin: 0 0 1.5rem;
 }
 /* Text */
 .hero-text {
@@ -341,11 +340,11 @@ nav h3 ~ a {
   display: none;
 } */
 
-/*** Projects ****************************************************************/
-/* .projects {
+/*** Portfolio ****************************************************************/
+/* .portfolio {
   background: var(--light-grey);
 }
-.projects h2 {
+.portfolio h2 {
   padding: 1.5rem;
 }
 .buttons-container {
@@ -354,7 +353,7 @@ nav h3 ~ a {
   justify-content: center;
   padding: 0 0.5rem;
 }
-.projects button {
+.portfolio button {
   background: none;
   border: none;
   color: var(--dark-blue);
@@ -401,9 +400,9 @@ nav h3 ~ a {
 @media (min-width: 768px) {
   .hero {
     flex-direction: row-reverse;
-    gap: 2rem;
   }
   .hero-image {
-    margin: 0;
+    margin: 0 0 0 clamp(1.7rem, 5vw, 4rem);
+    width: min(80vw, 20rem);
   }
 }
