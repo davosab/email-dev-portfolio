@@ -1,4 +1,4 @@
-/*** Mobile Menu *************************************************************/
+/* Mobile Menu ***************************************************************/
 
 const
   mobileMenu = document.querySelector("[data-mobile-menu]"),
@@ -22,11 +22,13 @@ openOrCloseMenu = () => {
 }
 
 
-/*** Skills Blob - mouse follower ********************************************/
+/* Skills Blob - mouse follower **********************************************/
 
 const
   gradientBackground = document.querySelector("[data-gradient-background]"),
-  blobContainer = document.querySelector("[data-blob-container]");
+  blobContainer = document.querySelector("[data-blob-container]"),
+  /** distance when opacity starts changing */
+  d = 100;
     
 body.addEventListener("mousemove", e => {
   const
@@ -37,6 +39,14 @@ body.addEventListener("mousemove", e => {
   updateBlobPosition = () => {
     blobContainer.style.setProperty("--mouse-x", mouseX + "px");
     blobContainer.style.setProperty("--mouse-y", mouseY + "px");
+    blobContainer.style.setProperty("--opacity", 1);
+    // Fade blob away when it's close to the sides
+    if (mouseX < d)
+      blobContainer.style.setProperty("--opacity", mouseX * 1 / d);
+    
+    if (mouseX > gradientBackgroundRect.right - d)
+      blobContainer.style.setProperty("--opacity",
+        (gradientBackgroundRect.right - mouseX) * 1 / d);
   }
   requestAnimationFrame(updateBlobPosition);
 });
