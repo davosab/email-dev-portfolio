@@ -51,5 +51,8 @@ body.addEventListener("mousemove", e => {
   requestAnimationFrame(updateBlobPosition);
 });
 
-/***  ***/
 
+/*** Project Sorting *********************************************************/
+
+const
+  sortBtns = document.querySelectorAll("[data-sort-button]");
