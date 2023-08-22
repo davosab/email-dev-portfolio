@@ -5,7 +5,7 @@ const
   secondsOutput = document.getElementById("seconds"),
 
   /*** SET BOOTCAMP DATE HERE **************************************************/
-  bootcampDate = new Date("2023-08-09T00:00:00+02:00"),
+  bootcampDate = new Date("2024-02-23T00:00:00+02:00"),
   /*****************************************************************************/
 
   secondInMs = 1000,
