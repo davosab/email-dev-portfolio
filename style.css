@@ -40,14 +40,15 @@ h1 {
 h2  {
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding: 1rem 1.25rem;
+  padding: 1rem 0;
 }
 p {
   line-height: 1.25;
   color: var(--dark-grey);
 }
 body {
-  --max-content-width: 1200px;
+  --max-content-width: 1400px;
+  --section-padding: min(5vw, 3rem);
 
   padding-top: 3.4rem;
   color: var(--dark-blue);
@@ -72,6 +73,9 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   background: #9b9b9b;
+}
+section {
+  padding: var(--section-padding);
 }
 
 /*** Mobile Menu *************************************************************/
@@ -231,6 +235,9 @@ nav h3 ~ a {
 }
 
 /*** Skills ******************************************************************/
+.skills {
+  padding: 0;
+}
 .skills > h3 {
   color: #fff;
   background: var(--dark-blue);
@@ -286,7 +293,7 @@ nav h3 ~ a {
 .skills-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
   gap: 0.8rem;
   padding: 1rem 1rem 6rem;
   max-width: 600px;
@@ -325,6 +332,10 @@ nav h3 ~ a {
 }
 
 /*** About *******************************************************************/
+:is(.about, .portfolio) > * {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+}
 /* .about > img {
   width: calc(100% - 2rem);
   margin: 0 auto;
@@ -357,7 +368,7 @@ nav h3 ~ a {
   color: var(--dark-blue);
   font-size: clamp(0.85rem, 2vw, 1rem);
   font-weight: var(--medium);
-  padding: 0.5em clamp(0.4em, 2vw, 1rem);
+  padding: 0.55em clamp(0.6em, 2vw, 1rem) 0.5em;
   position: relative;
   box-shadow: 0 0.2rem 1rem #0002;
   cursor: pointer;
@@ -367,28 +378,35 @@ nav h3 ~ a {
 .portfolio button:hover {
   box-shadow: 0 0.2rem 1rem #0000002f;
 }
-/* .portfolio button::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0;
-  background-color: var(--green);
-  transition: all ease-out 0.05s;
-} */
 .portfolio button.active {
   color: var(--green);
 }
 /* Cards */
 .cards-container {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 1fr;
   margin-top: 2rem;
   gap: 1rem;
 }
 .card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.6rem #00000010;
 }
+.preview-container {
+  aspect-ratio: 16/8.5;
+  overflow: hidden;
+  background-size: cover;
+  transition: background-position ease-in-out 2s;
+}
+.preview-container:hover {
+  background-position: bottom;
+}
+
 
 /*** Contact *****************************************************************/
 
@@ -406,23 +424,23 @@ nav h3 ~ a {
 @media (min-width: 300px){
   .skills-container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
   }
 }
 @media (min-width: 400px){
   .skills-container {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 @media (min-width: 560px){
   .skills-container {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 1fr;
   }
 }
 /***************/
 @media (min-width: 768px) {
+  body {
+    --section-padding: clamp(1.5rem, 9vw, 3rem) clamp(1.5rem, 9vw, 5rem);
+  }
   h2, .hero, section:not(.skills) p {
     text-align: left;
   }
@@ -435,6 +453,5 @@ nav h3 ~ a {
   }
   .buttons-container {
     justify-content: flex-start;
-    padding-left: 1.25rem;
   }
 }
