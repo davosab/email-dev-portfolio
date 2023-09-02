@@ -15,6 +15,7 @@
   --bold: 700;
 
   font-size: clamp(14px, 3vw, 18px);
+  scroll-behavior: smooth;
 }
   
 *, *::before, *::after {
@@ -76,6 +77,13 @@ body::-webkit-scrollbar-thumb {
 }
 section {
   padding: var(--section-padding);
+}
+.scroll-to {
+  position: relative;
+}
+.anchor {
+  position: absolute;
+  top: -3.4rem;
 }
 
 /*** Mobile Menu *************************************************************/
@@ -212,9 +220,18 @@ nav h3 ~ a {
   z-index: 2;
   max-width: 400px;
 }
+.hero span {
+  font-size: 1.4rem;
+  font-weight: var(--medium);
+  line-height: 2;
+  display: inline-block;
+}
 .hero-text p {
   padding: 0.75rem 0;
   color: var(--dark-blue);
+  text-shadow: 
+    4px 4px 10px var(--light-grey), -4px -4px 10px var(--light-grey), 
+    -4px 4px 10px var(--light-grey), 4px -4px 10px var(--light-grey);
 }
 .hero-text a {
   display: inline-block;
@@ -332,7 +349,7 @@ nav h3 ~ a {
 }
 
 /*** About *******************************************************************/
-:is(.about, .portfolio) > * {
+:is(.about, .portfolio, .contact, footer) > * {
   max-width: var(--max-content-width);
   margin: 0 auto;
 }
@@ -406,10 +423,69 @@ nav h3 ~ a {
 .preview-container:hover {
   background-position: bottom;
 }
-
+.about-project {
+  padding: 1em 1em 0.8em;
+  text-align: left;
+}
+.type {
+  padding: 0.2em 0.5em;
+  display: inline-block;
+  border-radius: 0.2em;
+  margin: 0.5em 0 0.8em;
+}
+[data-project-type="email"] .type {
+  color: #e58208;
+  background: #e582082c;
+}
+[data-project-type="landing-page"] .type {
+  color: #084887;
+  background: #0847872c;
+}
+.view-link, .code-link {
+  color: #fff;
+  padding: 0.5em;
+  margin: auto 0.5em 0;
+  border-radius: 2px;
+}
+.view-link {
+  background: var(--green);
+  margin: auto 0.5em 0;
+}
+.code-link {
+  background: var(--dark-blue);
+  margin: 2px 0.5em 0.5em;
+}
+.card svg {
+  height: 1em;
+  width: 1em;
+  margin-left: 0.8em;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 /*** Contact *****************************************************************/
-
+.socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.socials-container :is(svg, img) {
+  height: 3rem;
+  margin: 1rem 0;
+}
+/*** Footer ******************************************************************/
+footer {
+  background: var(--light-grey);
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+footer p, footer a {
+  color: var(--dark-grey)
+}
+footer a {
+  text-decoration: underline;
+}
 
 /*** Media Queries ***********************************************************/
 @media (min-width: 375px){
@@ -454,4 +530,8 @@ nav h3 ~ a {
   .buttons-container {
     justify-content: flex-start;
   }
+  .socials-container {
+    justify-content: flex-start;
+  }
 }
+
