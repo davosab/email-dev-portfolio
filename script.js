@@ -2,9 +2,14 @@
 
 const
   mobileMenu = document.querySelector("[data-mobile-menu]"),
+  links = document.querySelectorAll("[data-mobile-menu-link"),
   burger = document.querySelector("[data-burger]"),
   body = document.querySelector("body"),
   mobileDevicePattern = /android | iphone | ipad | kindle/i;
+
+links.forEach(link => {
+  link.addEventListener("click", () => openOrCloseMenu());
+});
 
 burger.addEventListener("click", () => openOrCloseMenu());
 
@@ -14,11 +19,10 @@ openOrCloseMenu = () => {
   // if mobile device
   if (mobileDevicePattern.test(navigator.userAgent)) {
     body.classList.toggle("no-scroll");
+    return;
   }
   // Add margin to body to prevent body expanding when scrollbar disappears
-  else { 
     body.classList.toggle("no-scroll-margin");
-  }
 }
 
 
@@ -27,28 +31,50 @@ openOrCloseMenu = () => {
 const
   gradientBackground = document.querySelector("[data-gradient-background]"),
   blobContainer = document.querySelector("[data-blob-container]"),
-  /** distance when opacity starts changing */
+  /** distance (pixels) when opacity starts changing */
   d = 100;
+let previousClientX, previousClientY;
+
+updateBlobPosition = (x, y, rect) => {
+  // Don't update blob position when mouse is viewport height away from section
+  if (y < -innerHeight || 
+    y > gradientBackground.offsetHeight + innerHeight) return;
     
+  blobContainer.style.setProperty("--mouse-x", x + "px");
+  blobContainer.style.setProperty("--mouse-y", y + "px");
+  blobContainer.style.setProperty("--opacity", 1);
+  // Fade blob away when it's close to the sides
+  if (x < d)
+    blobContainer.style.setProperty("--opacity", x * 1 / d);
+  
+  if (x > rect.right - d)
+    blobContainer.style.setProperty("--opacity",
+      (rect.right - x) * 1 / d);
+}
+
 body.addEventListener("mousemove", e => {
-  const
+  const 
     gradientBackgroundRect = gradientBackground.getBoundingClientRect(),
     mouseX = e.clientX - gradientBackgroundRect.left,
     mouseY = e.clientY - gradientBackgroundRect.top;
 
-  updateBlobPosition = () => {
-    blobContainer.style.setProperty("--mouse-x", mouseX + "px");
-    blobContainer.style.setProperty("--mouse-y", mouseY + "px");
-    blobContainer.style.setProperty("--opacity", 1);
-    // Fade blob away when it's close to the sides
-    if (mouseX < d)
-      blobContainer.style.setProperty("--opacity", mouseX * 1 / d);
-    
-    if (mouseX > gradientBackgroundRect.right - d)
-      blobContainer.style.setProperty("--opacity",
-        (gradientBackgroundRect.right - mouseX) * 1 / d);
-  }
-  requestAnimationFrame(updateBlobPosition);
+  previousClientX = e.clientX,
+  previousClientY = e.clientY;
+
+  requestAnimationFrame(() => {
+    updateBlobPosition(mouseX, mouseY, gradientBackgroundRect)}
+  );
+});
+
+window.addEventListener('scroll', () => {
+  const 
+    gradientBackgroundRect = gradientBackground.getBoundingClientRect(),
+    previousMouseX = previousClientX - gradientBackgroundRect.left,
+    previousMouseY = previousClientY - gradientBackgroundRect.top;
+
+  requestAnimationFrame(() => {
+    updateBlobPosition(previousMouseX, previousMouseY, gradientBackgroundRect)
+  });  
 });
 
 
