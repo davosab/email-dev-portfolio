@@ -15,7 +15,7 @@
 
   <title>Email Developer | David Sabau</title>
 </head>
-<body id="top">
+<body>
 
 <!-- Navigation -->
 <menu data-mobile-menu class="mobile-menu">
@@ -27,7 +27,7 @@
 <nav>
   <div class="nav-items-container">
     <h3 class="logo">
-      <a href="#top">
+      <a href="https://email-dev.davidsabau.com">
         David<span>Dev</span>
       </a>
     </h3>
@@ -38,9 +38,9 @@
       <div></div>
     </div>
     <!-- Links -->
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+    <a href="#" class="nav-link" data-nav-link onclick="scrollToSection('about')">About</a>
+    <a href="#" class="nav-link" data-nav-link onclick="scrollToSection('portfolio')">Portfolio</a>
+    <a href="#" class="nav-link" data-nav-link onclick="scrollToSection('contact')">Contact</a>
   </div>
 </nav>
 
@@ -52,9 +52,9 @@
   <div class="hero-text">
     <h1>Email Developer</h1>
     <p>
-      <span>👋 — I'm David Sabau, </span><br>I specialize in crafting pixel-perfect, responsive & 
-      accessible emails and landing pages that drive engagement and boost 
-      your brand's impact.
+      <span>👋 — I'm David Sabau, </span><br>I specialize in crafting pixel-perfect, 
+      responsive & accessible emails and landing pages that drive engagement and 
+      boost your brand's impact.
     </p>
     <a href="mailto:davidsabau72@gmail.com">Get in touch!</a>
   </div>
@@ -142,9 +142,9 @@
   <h2>My work</h2>
 
   <div class="buttons-container">
-    <button data-sort-button class="active">All</button>
-    <button data-sort-button>Emails</button>
-    <button data-sort-button>Landing Pages</button>
+    <button data-sort-button="all" class="active-green">All</button>
+    <button data-sort-button="emails">Emails</button>
+    <button data-sort-button="landing-pages">Landing Pages</button>
   </div>
 
   <div class="cards-container">
@@ -161,8 +161,8 @@
           message.
         </p>
       </div>
-      <a class="view-link" target="_blank" href="projects/lead capture/lead-capture">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
-      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/tree/main/projects/lead%20capture">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="view-link" target="_blank" href="projects/lead capture/lead-capture">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/tree/main/projects/lead%20capture">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
     </article>
 
     <article data-project-type="landing-page" class="card">
@@ -177,8 +177,8 @@
           and a countdown.
         </p>
       </div>
-      <a class="view-link" target="_blank" href="projects/sign up/sign-up">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
-      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/tree/main/projects/sign%20up">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="view-link" target="_blank" href="projects/sign up/sign-up">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/tree/main/projects/sign%20up">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
     </article>
 
     <article data-project-type="email" class="card">
@@ -189,12 +189,12 @@
         <h3>Promotional Email</h3>
         <span class="type">Email</span>
         <p class="summary">
-          Accessible promotional email. Uses MSO specific ghost tables and 
+          Accessible promotional email. Responsive multi-column layout with 
           screen reader only text.
         </p>
       </div>
-      <a class="view-link" target="_blank" href="projects/bose-promotional">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
-      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/bose-promotional.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="view-link" target="_blank" href="projects/bose-promotional">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/bose-promotional.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
     </article>
 
     <article data-project-type="email" class="card">
@@ -205,12 +205,11 @@
         <h3>Transactional Email</h3>
         <span class="type">Email</span>
         <p class="summary">
-          Clean transactional email that continues selling. Dark theme is 
-          commented out in head style tag.
+          Clean transactional email that continues selling. Dark theme coded.
         </p>
       </div>
-      <a class="view-link" target="_blank" href="projects/huckberry-transactional">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
-      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/huckberry-transactional.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="view-link" target="_blank" href="projects/huckberry-transactional">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/huckberry-transactional.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
     </article>
 
     <article data-project-type="email" class="card">
@@ -221,11 +220,11 @@
         <h3>Newsletter Email</h3>
         <span class="type">Email</span>
         <p class="summary">
-          A newsletter email. Dark theme is commented out in head style tag.
+          A newsletter email. Dark theme available.
         </p>
       </div>
-      <a class="view-link" target="_blank" href="projects/digitalocean-newsletter">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
-      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/digitalocean-newsletter.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path> <polygon class="st0" points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon> <polygon class="st0" points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="view-link" target="_blank" href="projects/digitalocean-newsletter">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
+      <a class="code-link" target="_blank" href="https://github.com/davosab/email-dev-portfolio/blob/main/projects/digitalocean-newsletter.html">Code<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
     </article>
 
   </div>
