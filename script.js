@@ -70,6 +70,10 @@ updateBlobPosition = (x, y, rect) => {
   blobContainer.style.setProperty("--mouse-x", x + "px");
   blobContainer.style.setProperty("--mouse-y", y + "px");
   blobContainer.style.setProperty("--opacity", 1);
+
+  // Hide blob when mouse has not moved yet
+  if (isNaN(y)) blobContainer.style.setProperty("--mouse-y", "-100px");
+
   // Fade blob away when it's close to the sides
   if (x < d)
     blobContainer.style.setProperty("--opacity", x * 1 / d);
