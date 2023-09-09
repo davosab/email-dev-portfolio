@@ -26,6 +26,33 @@ openOrCloseMenu = () => {
 }
 
 
+/* Navigation Links **********************************************************/
+
+const navLinks = document.querySelectorAll("[data-nav-link]");
+
+scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  section.scrollIntoView();
+}
+
+navLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    navLinks.forEach(link => link.classList.remove("active-green"));
+    link.classList.add("active-green");
+  });
+});
+// Prevent page from smooth-scrolling on refresh
+addEventListener("beforeunload", () => 
+  document.documentElement.style.scrollBehavior = "auto"
+);
+
+addEventListener("load", () => 
+  setTimeout(() => document.documentElement.style.scrollBehavior = "smooth", 
+  400)
+);
+
+
 /* Skills Blob - mouse follower **********************************************/
 
 const
@@ -61,24 +88,51 @@ body.addEventListener("mousemove", e => {
   previousClientX = e.clientX,
   previousClientY = e.clientY;
 
-  requestAnimationFrame(() => {
-    updateBlobPosition(mouseX, mouseY, gradientBackgroundRect)}
+  requestAnimationFrame(() => 
+    updateBlobPosition(mouseX, mouseY, gradientBackgroundRect)
   );
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const 
     gradientBackgroundRect = gradientBackground.getBoundingClientRect(),
     previousMouseX = previousClientX - gradientBackgroundRect.left,
     previousMouseY = previousClientY - gradientBackgroundRect.top;
 
-  requestAnimationFrame(() => {
+  requestAnimationFrame(() => 
     updateBlobPosition(previousMouseX, previousMouseY, gradientBackgroundRect)
-  });  
+  );  
 });
 
 
 /*** Project Sorting *********************************************************/
 
 const
-  sortBtns = document.querySelectorAll("[data-sort-button]");
+  sortBtns = document.querySelectorAll("[data-sort-button]"),
+  btnAll = document.querySelector("[data-sort-button='all']"),
+  btnEmails = document.querySelector("[data-sort-button='emails']"),
+  btnLPages = document.querySelector("[data-sort-button='landing-pages']"),
+  cards = document.querySelectorAll("[data-project-type]"),
+  cardsEmail = document.querySelectorAll("[data-project-type='email']"),
+  cardsLPage = document.querySelectorAll("[data-project-type='landing-page']");
+
+hideAndShow = (x, y) => {
+  x.forEach(card => card.classList.add("hidden-card"));
+  y.forEach(card => card.classList.remove("hidden-card"));
+}
+
+sortBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    sortBtns.forEach(btn => btn.classList.remove("active-green"));
+    btn.classList.add("active-green");
+  });
+});
+
+btnAll.addEventListener("click", () => 
+  cards.forEach(card => card.classList.remove("hidden-card"))
+);
+
+btnEmails.addEventListener("click", () => hideAndShow(cardsLPage, cardsEmail));
+
+btnLPages.addEventListener("click", () => hideAndShow(cardsEmail, cardsLPage));
+
