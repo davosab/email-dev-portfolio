@@ -19,9 +19,9 @@
 
 <!-- Navigation -->
 <menu data-mobile-menu class="mobile-menu">
-    <a data-mobile-menu-link href="#about">About</a>
-    <a data-mobile-menu-link href="#portfolio">Portfolio</a>
-    <a data-mobile-menu-link href="#contact">Contact</a>
+    <a href="#" data-mobile-menu-link data-nav-link onclick="scrollToSection('about')">About</a>
+    <a href="#" data-mobile-menu-link data-nav-link onclick="scrollToSection('portfolio')">Portfolio</a>
+    <a href="#" data-mobile-menu-link data-nav-link onclick="scrollToSection('contact')">Contact</a>
 </menu>
 
 <nav>
@@ -52,15 +52,15 @@
   <div class="hero-text">
     <h1>Email Developer</h1>
     <p>
-      <span>👋 — I'm David Sabau, </span><br>I specialize in crafting pixel-perfect, 
-      responsive & accessible emails and landing pages that drive engagement and 
-      boost your brand's impact.
+      <span>👋 — I'm David Sabau, </span><br>I specialize in crafting 
+      pixel-perfect, responsive & accessible emails and landing pages that drive 
+      engagement and boost your brand's impact.
     </p>
     <a href="mailto:davidsabau72@gmail.com">Get in touch!</a>
   </div>
   <picture>
     <source media="(min-width: 600px)" srcset="images/letter-stream.png">
-    <img class="bg-image" src="images/letter-stream-mobile.png" width="100%" alt="letter stream">
+    <img class="bg-image" src="images/letter-stream-mobile.png" alt="letter stream">
   </picture>
 </section>
 
@@ -119,21 +119,48 @@
 <!-- About -->
 <section class="about scroll-to">
   <span id="about" class="anchor"></span>
-  <h2>About Me</h2>
-  <img src="images/" alt="">
-  <p>
-    My experience in affiliate marketing has made me familiar with email 
-    marketing and automation technology as well as given me the opportunity to 
-    see many emails and landing pages, I understand what works and how to engage 
-    your audience effectively.<br><br>
+  <div class="about-content-container">
+    <picture class="about-image">
+      <source srcset="images/david-coding.jpg" media="(min-width: 768px)">
+      <img src="images/david-coding-mobile.jpg" alt="David at his desk, coding on his laptop with a book at hand">
+    </picture>
+    <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      My experience in affiliate <span>marketing</span> has made me familiar with 
+      email marketing and automation technology as well as given me the opportunity 
+      to see many emails and landing pages, I understand what works and how to 
+      <span>engage your audience</span> effectively.<br><br>
 
-    My passion for detail comes from my early love for fine woodworking & 
-    music. Every pixel is meticulously considered, every line of code serves a 
-    purpose, and every challenge is met with a "let's go" attitude.<br><br>
+      My <span>passion for detail</span> comes from my early love for fine 
+      woodworking & music. Every pixel is meticulously considered, every line of 
+      code serves a purpose, and every challenge is met with a <span>"let's go"
+      </span> attitude.<br><br>
 
-    I strive for perfection in every project I undertake, and I welcome the 
-    opportunity to bring my skills to your team.
-  </p>
+      I <span>strive for perfection</span> in every project I undertake, and I 
+      welcome the opportunity to bring my skills to your team.
+    </p>
+    </div>
+  </div>
+  <!-- <div class="about-content">
+    <picture>
+      <source srcset="images/david-coding.jpg" media="(min-width: 768px) and (max-width: 823.98px)">
+      <source srcset="images/david-coding-shorter.jpg" media="(min-width: 824px) and (max-width: 999.98px)">
+      <source srcset="images/david-coding-mobile.jpg" media="(min-width: 1000px)">
+      <img src="images/david-coding-mobile.jpg" alt="David at his desk, coding on his laptop with a book at hand">
+    </picture>
+    <p>
+      My experience in affiliate marketing has made me familiar with email
+      marketing and automation technology as well as given me the opportunity to
+      see many emails and landing pages, I understand what works and how to engage
+      your audience effectively.<br><br>
+      My passion for detail comes from my early love for fine woodworking &
+      music. Every pixel is meticulously considered, every line of code serves a
+      purpose, and every challenge is met with a "let's go" attitude.<br><br>
+      I strive for perfection in every project I undertake, and I welcome the
+      opportunity to bring my skills to your team.
+    </p>
+  </div> -->
 </section>
 
 <!-- Portfolio -->
@@ -205,7 +232,7 @@
         <h3>Transactional Email</h3>
         <span class="type">Email</span>
         <p class="summary">
-          Clean transactional email that continues selling. Dark theme coded.
+          Clean transactional email that continues selling. Dark theme compatible.
         </p>
       </div>
       <a class="view-link" target="_blank" href="projects/huckberry-transactional">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
@@ -220,7 +247,7 @@
         <h3>Newsletter Email</h3>
         <span class="type">Email</span>
         <p class="summary">
-          A newsletter email. Dark theme available.
+          A newsletter email. Dark theme compatible.
         </p>
       </div>
       <a class="view-link" target="_blank" href="projects/digitalocean-newsletter">View<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><path d="M96,0v416h416V0H96z M472,376H136V40h336V376z"></path><polygon points="40,472 40,296 40,136 40,96 0,96 0,512 416,512 416,472 376,472 "></polygon><polygon points="232.812,312.829 350.671,194.969 350.671,279.766 390.671,279.766 390.671,126.688 237.594,126.688 237.594,166.688 322.39,166.688 204.531,284.547 "></polygon></g></g></svg></a>
