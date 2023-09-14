@@ -344,6 +344,7 @@ nav {
   gap: 0.5rem;
   position: relative;
   z-index: 3;
+  user-select: none;
 }
 .skill svg, 
 .skill img {
