@@ -261,6 +261,7 @@ nav {
 }
 /* Background image */
 .hero .bg-image {
+  width: 100%;
   position: absolute;
   left: 0;
   right: 0;
@@ -284,7 +285,7 @@ nav {
 }
 .blob-container {
   --mouse-x: -50vw; /* updated with JS */
-  --mouse-y: 0;
+  --mouse-y: -5rem;
 
   --blob-height: 5rem;
   --blob-width: 4.2rem;
@@ -369,24 +370,31 @@ nav {
   max-width: var(--max-content-width);
   margin: 0 auto;
 }
-/* .about > img {
-  width: calc(100% - 2rem);
-  margin: 0 auto;
-  position: relative;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 1rem 0 #0004;
+.about-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-image img {
+  max-height: 400px;
+  border-radius: 0.5em;
+  box-shadow: 0 0.5rem 1rem #0004;
+  border: 2px solid var(--green);
+}
+.about-text {
+  max-width: 500px;
 }
 .about h2 {
-  margin-top: 1.5rem;
+  padding: 0 0 1rem;
 }
-.about-content {
-  padding: 1.5rem;
+.about span {
+  color: var(--dark-blue);
+  font-weight: var(--bold);
 }
-.about-content img {
-  display: none;
-} */
 
-/*** Portfolio ****************************************************************/
+/*** Portfolio ***************************************************************/
 .portfolio {
   background: var(--light-grey);
 }
@@ -563,6 +571,13 @@ footer a:hover {
   .hero-image {
     margin: 0 0 0 clamp(1.725rem, 4vw, 4rem);
     width: min(100%, 20rem);
+  }
+  .about-content-container {
+    flex-direction: row;
+    gap: clamp(1.725rem, 4vw, 4rem);
+  }
+  .about img {
+    min-width: 240px;
   }
   .buttons-container {
     justify-content: flex-start;
